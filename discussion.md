@@ -1,10 +1,6 @@
-First of all, I would like to thanks to Kaggle and the organizers. I have learned a lot from this experience.  
-
-
-
+# Solution Approach
 ##  1. model
-
-In early time, feeding a bsx4xHxW input to the 2D-CNN produce worse result than the one-image method.  I start to think why?
+(author*) In early time, feeding a bsx4xHxW input to the 2D-CNN produce worse result than the one-image method.  I start to think why?
 
 Due to the position-sensitive nature of the labels (LPD, GPD, etc.), We should take care of the channel dimension. 2D-CNN is not well-equipped to capture positional information within the channels. Because there is not pad in channel direction. And that's why we need to concat the spectrum into one image for a vision model other than a bsx16xHxW image( double banana montage).
 So I decided to use 3d-CNN for spectrum, and 2d-CNN model for raw-eeg signal.
@@ -31,6 +27,7 @@ all model score
 | raw        | effb5       | butter0.5-20 | 0.231260  | 0.284402   |
 | doublehead | x3d-l effb5 | butter0.5-20 | 0.232257  | 0.285584   |
 | raw        | hgnetb5     | mne 0.5-20   | 0.239238  | 0.287301   |
+
 ### 1.1 spectrum model
 
 
