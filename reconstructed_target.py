@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-df = pd.read_csv('../hms-harmful-brain-activity-classification/train.csv')
+df = pd.read_csv('/kaggle/input/hms-harmful-brain-activity-classification/train.csv')
 TARGETS = df.columns[-6:]
 new_target = []
 
