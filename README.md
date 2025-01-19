@@ -1,9 +1,8 @@
-# HMS-eeg-comp
-2nd solution to HMS - Harmful Brain Activity Classification
+# HHBAC-Solution
 
 ## 1. data
 
-Unzip the hms data to ../hms-harmful-brain-activity-classification
+Unzip the hbac data to ../hms-harmful-brain-activity-classification
 
 Produce new train.csv by
 ```
